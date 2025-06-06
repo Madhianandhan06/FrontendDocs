@@ -1,0 +1,173 @@
+/* styles.css */
+:root {
+    --html-color: #e34c26;
+    --css-color: #2965f1;
+    --js-color: #f0db4f;
+    --dark-color: #2b2d42;
+    --light-color: #f8f9fa;
+    --gray-color: #6c757d;
+}
+
+* {
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    background-color: var(--light-color);
+    color: var(--dark-color);
+    padding: 20px;
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    color: var(--dark-color);
+}
+
+.header p {
+    font-size: 1.2rem;
+    color: var(--gray-color);
+}
+
+.card-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.card {
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+}
+
+.card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.card-icon {
+    position: absolute;
+    top: -25px;
+    right: 20px;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    color: white;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.card-icon.html {
+    background-color: var(--html-color);
+}
+
+.card-icon.css {
+    background-color: var(--css-color);
+}
+
+.card-icon.js {
+    background-color: var(--js-color);
+}
+
+.card-content {
+    padding: 25px;
+    position: relative;
+}
+
+.card-content h2 {
+    margin-bottom: 15px;
+    font-size: 1.5rem;
+}
+
+.card-content p {
+    margin-bottom: 20px;
+    color: var(--gray-color);
+}
+
+.features {
+    list-style: none;
+    margin-bottom: 25px;
+}
+
+.features li {
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.features i {
+    margin-right: 10px;
+    font-size: 0.8rem;
+}
+
+.btn {
+    display: inline-block;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 5px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 100%;
+    text-align: center;
+}
+
+.html-btn {
+    background-color: var(--html-color);
+    color: white;
+}
+
+.css-btn {
+    background-color: var(--css-color);
+    color: white;
+}
+
+.js-btn {
+    background-color: var(--js-color);
+    color: var(--dark-color);
+}
+
+.html-btn:hover {
+    background-color: #c4411e;
+}
+
+.css-btn:hover {
+    background-color: #1a4fd8;
+}
+
+.js-btn:hover {
+    background-color: #e9d249;
+}
+
+@media (max-width: 768px) {
+    .card-container {
+        grid-template-columns: 1fr;
+    }
+    
+    .header h1 {
+        font-size: 2rem;
+    }
+}
